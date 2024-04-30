@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/3c2b744d-bbe4-4756-a6a0-fbfec949d8e8"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,10 +25,34 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.sergiolombana101.myapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "testorg-az",
+            "project": "sergio-react-native",
+            "authToken": "9bdcdadb0a2245cb965c4e138a6bb96f1798b238be624d43858abd8d91c11ebc"
+          }
+        }
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3c2b744d-bbe4-4756-a6a0-fbfec949d8e8"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
