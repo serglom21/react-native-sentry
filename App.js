@@ -15,7 +15,7 @@ Sentry.init({
         return ["InboundFilters", "FunctionToString", "LinkedErrors", "Dedupe"].includes(integration.name);
     });
 
-    return defaultIntegrations.concat([breadcrumbsIntegration({ dom: false, history: false, console: true })]);
+    return defaultIntegrations.concat([breadcrumbsIntegration({ dom: false, history: false, console: false })]);
   },
 })
 
